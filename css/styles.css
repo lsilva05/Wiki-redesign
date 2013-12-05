@@ -1,0 +1,254 @@
+/* =================================
+Using percentages, ems, and other fun things
+
+
+LAYOUT -
+===================================*/
+body{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+
+
+.container {
+	margin: 0 auto;
+	width: 96%/* 960px | 96 seems to be "in" right now */;
+	max-width: 960px; /*make it the same!*/;
+
+}
+
+
+article {
+	margin: 5%;
+}
+
+aside{
+	width: 96%; /*you know the drill*/
+	margin: 2%;
+}
+section{
+	margin: 5%;
+}
+
+
+nav{
+	width: 100%; /* 960/960 container = 100% */
+	text-decoration: none;
+	margin-left: 0;
+}
+
+a{
+	text-decoration: none;}
+	
+ul{
+	padding-left: 0;
+	font-size: 1.25em;
+
+}
+
+a:link{
+	color:#999;
+}
+
+a:active{
+	color: red;
+}
+
+a:visited{
+	color:#333;
+}
+
+:target{
+	color: red;
+	transition-property: color;
+}
+
+/*========HEADINGS AND PARAGRAPHS==========*/
+
+h1{
+	font-size: 2em;	
+}
+
+h2{
+	font-size: 2em;
+}
+
+
+/*=======CONTENT=====*/
+
+.container nav ul li {
+	display: inline;
+	text-decoration: none;
+	padding: 0 0 0 3%;
+}
+
+article p {
+	background: white;	
+	width: 65%;
+	float:left;
+	font-size: 1em;
+
+}
+
+
+article:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+aside p{
+	font-size: 1em;
+	padding: 1.125%;
+}
+
+
+.history {
+	width: 60%;
+}
+
+.history-img{
+	width: 35%;
+	min-width: 250px;
+	background: red;
+	float: left;
+	margin: 5%
+}
+
+.story{
+
+}
+
+.story-div{
+	padding: 1%;
+	margin-top: 3%;
+}
+
+.story-img{
+	float: right;
+	margin: 3%;
+	width: 168px;
+	height: 199px;
+	border: 1px solid grey;
+	padding: 1%;
+}
+
+
+
+
+
+/* !!- the footer must use clear so it doesn't collapse*/
+footer{
+	clear: both;
+	background: red;	
+}
+
+
+/*=======
+TYPOGRAPHY
+=========*/
+
+h1{
+	font-size: 3em; /*target/context=result | 48px/16px= 3EM  |  */
+}
+
+h2{
+	font-size: 2em; /*  32px / 16 = 2em  */	
+}
+
+h3{
+	font-size: 1.1em;
+}
+
+p{
+	font-size: 1.25em; /* 20px / 16px = 1.25em*/
+
+}
+
+a{
+	font-size: 1em; /* 20px / 20px = 1em*/	
+}
+
+
+/*===================
+MOBILE
+********************/
+
+@media screen and (max-width: 460px){
+	background {
+			background: blue;
+	}
+	
+	nav ul li {
+	display: block;
+	}
+	
+	article{
+		float: none;
+		width: 100%;
+	}
+	
+	aside{
+		float: none;
+		width: 100%;
+	}
+	
+	
+.history-img{
+	background: red;
+	float: none;
+	margin: 3%;
+}
+
+.story-img{
+	float: none;
+}
+
+article p {
+	float:none;
+	width: 95%;
+	font-size: 1em;
+
+}
+.container nav ul li {
+	display: block;
+
+}
+
+@media screen and (max-width: 720px){
+	background {
+			background: blue;
+	}
+	
+	article{
+		float: none;
+		width: 100%;
+	}
+	
+	aside{
+		float: none;
+		width: 100%;
+	}
+	
+	
+.history-img{
+
+	background: red;
+	float: none;
+	margin: 3%;
+}
+
+.story-img{
+	float: none;
+}
+.container nav ul li {
+	display: block;
+
+}
+
+
+}
+/*end of mobile*/
